@@ -1,10 +1,17 @@
 ![Tasks Esperience](src/assets/images/logo-tasks-experience.svg)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
+Tasks Experience
+=============
 
-## Development server
+**Tasks Experience** é um ToDo list, simples de organizar suas tarefas com uma linda interface e pensado na usabilidade.
+Tenha uma visão geral de tudo o que tem para fazer e nunca perca o controle de uma tarefa importante.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+	Este projeto foi gerado com [CLI Angular] versão 6.1.1
+
+
+## Servidor de desenvolvimento
+
+Execute `ng serve` para um servidor dev. Navegue até `http: // localhost: 4200 /`. O aplicativo será recarregado automaticamente se você alterar qualquer um dos arquivos de origem.
 
 ## Code scaffolding
 
@@ -12,7 +19,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+BuildRun `ng build` para construir o projeto. Os artefatos de construção serão armazenados no diretório `dist /`. Use o sinalizador `--prod` para uma construção de produção.
 
 ## Running unit tests
 
