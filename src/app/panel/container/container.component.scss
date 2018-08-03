@@ -1,0 +1,179 @@
+//=========== Paineis e Cards
+.container-paines {
+    background: #F6F7FB;
+    height: 93vh;
+
+     .grade-colunas {
+        display: flex;
+        margin: 30px 20px 0px;
+        padding-left: 0px;
+        height: 90%;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        justify-content: center;
+
+         .coluna-item {
+            background: white;
+            border-radius: .5rem;
+            box-shadow: 0 5px 11px rgba(0, 0, 0, 0.05), 0 20px 10px -10px #EDEFF5;
+            margin: 0 20px;
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 25.33%;
+            -ms-flex: 0 0 25.33%;
+            flex: 0 0 25.33%;
+            display: flex;
+            flex-direction: column;
+
+            .conteudo-cabecalho {
+                display: block;
+                padding: 5px 30px;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                list-style: none;
+
+                h2 {
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                    color: #AFB8D2;
+                    font-size: 16px;
+                    text-transform: capitalize;
+                    cursor: default;
+                }
+            }
+
+            .card-listas {
+                margin-bottom: 0;
+                overflow-y: auto;
+                overflow-x: hidden;
+                list-style: none;
+                margin: 0 4px;
+                padding: 0 4px;
+                z-index: 1;
+                height: calc(100% - 21%);
+                min-height: 0;
+                background: white;
+
+                .container-posicao {
+                  
+                    .container-card {
+                        background: #B0BEC5;
+                        width: 100%;
+                        height: 90px;
+                        border-radius: .3rem;
+                        color: white;
+                        box-shadow: 0 8px 16px -7px rgba(89, 89, 89, 0.41);
+
+                        .card {
+                            text-align: left;
+                            word-wrap: break-word;
+                            font-family: 'Muli', sans-serif;
+                            font-size: 11px;
+                            font-weight: 300;
+                            line-height: 15px;
+                            letter-spacing: 0.2px;
+                            width: 320px;
+                            padding: 0 20px; 
+                            height: 52px;
+
+                            p {
+                                padding-top: 10px;
+                            }
+                        }
+                    }
+
+                    .botao-acoes {
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                }
+            }
+
+            .conteudo-botao {
+                margin: 10px 15px;
+                border-top: 1px dotted #eee;
+                padding-top: 6px;
+            }
+        }
+    }
+}
+
+//=========== Modal
+.modal-descricao {
+	display: none; 
+    position: fixed; 
+    z-index: 2; 
+    padding-top: calc(100% - 80%); 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background: rgba(99, 100, 117, 0.5);
+    transition: all 200ms ease;
+
+    .modal-container {
+    	z-index: 3;
+		background-color: #fefefe;
+	    margin: auto;
+	    padding: 20px;
+	    border-radius: .5rem;
+	    width: calc(100% - 60%);
+	    box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.08), 0 0 1px 0 rgba(0, 0, 0, 0.3);
+	    -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	          animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+	    .titulo h6 {
+	     	font-family: 'Montserrat', sans-serif;
+			font-weight: 400;
+			color: #7C859E;
+			font-size: 17px;
+			text-transform: capitalize;
+			cursor: default;
+			margin: 10px 0 18px 0px;
+	    }
+
+	    .descricao input {
+	    	font-size: 12px;
+			border: 1px solid #eee;
+			width: 100%;
+			padding: 15px 10px;
+			border-radius: .3rem;
+			color: #ccc;
+		    outline: none;
+	    }
+
+	    .descricao input.erro {
+	    	border: 1px solid #e49898;
+	    }
+
+	    .botao-descricao {
+	    	margin: 15px 0 0;
+	    }
+
+	    .fechar {
+	    	color: #d8d5d5;
+		    float: right;
+		    font-size: 28px;
+		    font-weight: bold;
+		    cursor: pointer;
+	    }
+    }
+}
+
+/**
+ * ----------------------------------------
+ * animaçãon slide-top
+ * ----------------------------------------
+ */
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}

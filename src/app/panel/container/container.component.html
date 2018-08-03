@@ -1,0 +1,103 @@
+<section class="io grid centro container-paines">
+	<div class="linha">
+		<div class="dezesseis wide coluna">
+			<div class="grade-colunas">
+		        <section class="coluna-item">
+			    	<header class="conteudo-cabecalho">
+			              <h2>A Fazer</h2>
+			        </header><!-- Lista-content -->
+			        <ul class="card-listas">
+			            <li *ngFor="let tarefa of tarefas[0], let indice = index">
+			                <div class="container-posicao">
+				                <div class="container-card">
+				                    <div class="card">
+				                      <p>{{ tarefa }}</p> 
+				                    </div><!-- Card descricao -->
+				                    <div class="botao-acoes">
+				                      	<button class="io botao basico-acao mini icone" (click)="movendoTarefas(1, 0, indice)">
+				                        	<i class="icone fa fa-share" aria-hidden="true"></i>
+				                      	</button>
+				                      	<button class="io botao basico-acao mini icone excluir" (click)="deletarTarefa(indice,0)">
+				                        	<i class="icone fa fa-trash" aria-hidden="true"></i>
+				                      	</button>
+				                    </div>
+				                </div><!-- container-card -->
+			                </div>
+			            </li>
+			        </ul><!-- card-listas -->
+
+		            <div class="conteudo-botao">
+		              <button class="io botao icone fluido basico-verde sombra" (click)="modalManipulator('block')">
+		                <i class="icone fa fa-plus" aria-hidden="true"></i>
+		              </button>
+		            </div><!-- "conteudo-bota -->
+		        </section><!-- Coluna-item A fazer-->
+
+		        <section class="coluna-item">
+		          	<header class="conteudo-cabecalho">
+		            	<h2>Fazendo</h2>
+		          	</header><!-- Lista-content -->
+		          	<ul class="card-listas">
+		            	<li *ngFor="let tarefa of tarefas[1], let indice = index">
+		                	<div class="container-posicao">
+		                  		<div class="container-card">
+		                    		<div class="card">
+		                      			<p>{{ tarefa }}</p>
+		                    		</div>
+			                    	<div class="botao-acoes">
+			                      		<button class="io botao basico-acao mini icone" (click)="movendoTarefas(2, 1, indice)">
+			                        		<i class="icone fa fa-share" aria-hidden="true"></i>
+			                      		</button>
+			                      		<button class="io botao basico-acao mini icone excluir" (click)="deletarTarefa(indice, 1)">
+			                        		<i class="fa fa-trash" aria-hidden="true"></i>
+			                      		</button>
+			                    	</div><!-- botao-acoes -->
+		                  		</div>
+		                	</div>
+		            	</li>
+		          	</ul><!-- card-listas -->
+		        </section><!-- Coluna-item Fazendo -->
+
+		        <section class="coluna-item">
+		          	<header class="conteudo-cabecalho">
+		              	<h2>Feito</h2>
+		          	</header><!-- Lista-content -->
+		          	<ul class="card-listas">
+		            	<li *ngFor="let tarefa of tarefas[2], let indice = index">
+		                	<div class="container-posicao">
+		                  		<div class="container-card">
+			                    	<div class="card">
+			                      		<p>{{ tarefa }}</p>
+			                    	</div>
+			                    	<div class="botao-acoes">
+				                     	<button class="io botao basico-acao mini icone" (click)="movendoParaFeito(indice)">
+				                        	<i class="icone fa fa-share" aria-hidden="true"></i>
+				                      	</button>
+				                      	<button class="io botao basico-acao mini icone excluir" (click)="deletarTarefa(indice, 2)">
+				                        	<i class="fa fa-trash" aria-hidden="true"></i>
+				                      	</button>
+				                    </div><!-- botao-acoes -->
+		                  		</div>
+		                	</div>
+		            	</li>
+		          	</ul><!-- card-listas -->
+		        </section><!-- Coluna-item Feito -->
+			</div><!-- Grade-colunas -->
+		</div>
+	</div><!-- linha -->
+</section><!-- Grid -->
+
+<section id="modal" class="modal-descricao">
+	<div class="modal-container">
+		<span class="fechar" (click)="modalManipulator('none')">&times;</span>
+		<header class="titulo">
+			<h6>Adicionar Tarefa</h6>
+		</header>
+		<div class="descricao">
+			<input type="text" id="descricao-input" [(ngModel)]="descricao"  #descricaoInput />
+		</div>
+		<div class="botao-descricao">
+			<button class="io botao mini basico-verde" (click)="addTarefa()">Adicionar tarefa</button>
+		</div>
+	</div><!-- Modal container -->
+</section><!-- Modal -->

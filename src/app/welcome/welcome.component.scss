@@ -1,0 +1,265 @@
+//====================== Style para Container
+ .conteudo-imagem {
+    width: 100%;
+    height: calc(100% + 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .titulo-logo {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: calc(6% - 0%) 0 0;
+        padding: 0;
+
+        .destaque {
+            position: absolute;
+            top: 11%;
+            width: 10%;
+            -webkit-animation: destaque 15s ease-in infinite both alternate;
+            animation: destaque 5s cubic-bezier(.55,.09,.68,.53) infinite both alternate;
+            will-change: transform;
+            z-index: 1;
+        }
+
+        @media only screen and (max-width: 400px) {
+            .destaque {
+                top: 34%;
+                width: 13%;
+            }
+        }
+
+        .circulo {
+            position: absolute;
+            top: 3%;
+            width: 6%;
+            animation: circulo 15s ease-in infinite both alternate;
+            will-change: transform;
+            right: 30%;
+            z-index: 2;
+        }
+
+        @media only screen and (max-width: 400px) {
+            .circulo {
+                top: 0%;
+                width: 8%;
+                right: 10%;
+            }
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            
+            color: #253858;
+            z-index: 5;
+
+        }
+
+        @media only screen and (max-width: 1100px) { //nexus 7
+            h1  {
+                font-size: 23px;
+            }
+        }
+
+        @media only screen and (max-width: 800px) {
+            h1 {
+                font-size: 28px;
+            }
+        }
+
+        @media only screen and (max-width: 600px) { //nexus 6
+             h1 {
+                font-size: 24px;
+                font-weight: 500;
+            }
+        }
+
+        @media only screen and (max-width: 400px) { //Iphone 6 X nexus 4
+            h1 {
+                font-weight: 500;
+                font-size: 24px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .titulo-logo {
+            margin: 0;
+        }
+    }
+
+     @media only screen and (max-width: 600px) {
+        .titulo-logo {
+            margin: 0;
+        }
+    }
+
+   
+    @media only screen and (max-width: 400px) {
+        .imagem-banner {
+            width: 85%;
+            max-width: 100%;
+            position: absolute;
+        }
+    }
+
+    @media only screen and (min-width: 400px) and (max-width: 600px) {
+        .imagem-banner {
+            width: 88%;
+            margin: 0 60px;
+        }
+    }
+
+    @media only screen and (min-width: 600px) and (max-width: 770px) {
+        .imagem-banner {
+            width: 72%;
+            margin: 0 90px;
+        }
+    }
+    
+}
+
+.conteudo-descricao {
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .titulo {
+    	margin-top: calc(25%);
+        padding: 20px;
+
+    	h1 {
+    		font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            color: #253858;
+            font-size: 35px;
+            line-height: 45px;
+            animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    	}
+
+        @media only screen and (max-width: 400px) {
+            h1 {
+                font-size: 20px;
+                line-height: 30px;
+                text-align: center;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 18px;
+            }
+        }
+    }
+    
+
+    @media only screen and (max-width: 600px) {
+        .titulo {
+            margin: 0;
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .titulo {
+            margin: calc(71%) 0 0;
+            padding: 0 10px;
+        }   
+    }
+
+    @media only screen and (min-width: 410px) and (max-width: 700px) {
+         .titulo {
+            margin: calc(1%) 0 0;
+            padding: 0 10px;
+        } 
+    }
+
+    @media only screen and (min-width: 700px) and (max-width: 780px) {
+        .titulo {
+            margin: calc(1%) 0 0;
+            padding: 0 10px;
+        } 
+    }
+
+    .descricao-paragrafo {
+
+        p {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            color: #253858;
+            font-size: 15px;
+            line-height: 25px;
+            padding: 0 60px;
+        }
+
+        @media only screen and (max-width: 400px) {
+            p {
+                font-size: 13px;
+                padding: 0 30px;
+            }
+        }
+
+        @media only screen and (min-width: 600px) and (max-width: 700px) {
+            p {
+                display: none;
+            }
+        }
+
+        @media only screen and (min-width: 700px) and (max-width: 770px) {
+            p {
+                display: none;
+            }
+        }
+
+        button {
+            margin: 0 60px;
+        }
+
+        @media only screen and (max-width: 400px) {
+            button {
+                margin: 0 25%;
+            }
+        }
+    }
+}
+
+//====================== Resetando grid para mobile
+ @media only screen and (min-width: 300px) and (max-width: 768px) {
+    .linha {
+       flex-direction: column !important;
+    }
+    .io.grid > .linha > [class*="oito wide"].coluna {
+        width: 100% !important;
+    }
+ }
+
+//====================== Animações
+@keyframes circulo {
+    0% {
+    transform: rotate(0) translate3d(0,20px,0) rotate(0);
+    }
+    100% {
+        transform: rotate(360deg) translate3d(0,40px,0) rotate(-360deg);
+    }
+}
+
+@keyframes destaque {
+    0% {
+        -webkit-transform: rotate(0) translateY(5px) rotate(0);
+        transform: rotate(0) translateY(5px) rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(0) translateX(10px) rotate(10deg);
+        transform: rotate(0) translateX(10px) rotate(3deg);
+    }
+}
+
+@keyframes fade-in{
+    0%{
+        opacity:0
+    }
+    100%{
+        opacity:1
+    }
+}
