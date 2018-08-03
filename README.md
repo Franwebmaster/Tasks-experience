@@ -3,10 +3,10 @@
 Tasks Experience
 =============
 
-**Tasks Experience** é um ToDo list, simples de organizar suas tarefas com uma linda interface e pensado na usabilidade.
+**Tasks Experience** é um ToDo list simples de organizar suas tarefas, com uma interface amigável e pensado na usabilidade.
 Tenha uma visão geral de tudo o que tem para fazer e nunca perca o controle de uma tarefa importante.
 
-	Este projeto foi gerado com [CLI Angular] versão 6.1.1
+	Este projeto foi gerado com [CLI Angular] versao 6.1.1
 
 
 ## Servidor de desenvolvimento
