@@ -1,4 +1,4 @@
-![Tasks](src/images/logo-tasks-experience.svg)
+![Tasks Esperience](src/assets/images/logo-tasks-experience.svg)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
 
