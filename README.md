@@ -1,4 +1,4 @@
-![Tasks Esperience](src/assets/images/logo-tasks-experience.svg)
+![Tasks Esperience](src/assets/images/TaskExperience.png)
 
 Tasks Experience
 =============
