@@ -28,6 +28,11 @@ export class ContainerComponent implements OnInit {
   	document.getElementById('modal').style.display = state;
   }
 
+  //Função para modal de deletar Card (Ainda a ser implementada)
+  // modalDelete(state) {
+  // 	document.getElementById('modal-acao').style.display = state;
+  // }
+
   //Function para adicionar descricao para array tarefas
   @saveStorage()
   addTarefa() {
@@ -50,6 +55,6 @@ export class ContainerComponent implements OnInit {
   //Function para remover indice do array
   @saveStorage()
   deletarTarefa(indice, t) {
-  	this.tarefas[t].splice(indice, 1)
+  	this.tarefas[t].splice(indice, 1);
   }
 }
