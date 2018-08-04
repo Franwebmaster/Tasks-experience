@@ -1,0 +1,2818 @@
+/*
+**
+**	Experience UI - 1
+**	https://bitbucket.org/frameworkexperience/experience-ui	
+**
+**
+*/
+
+/* Importe das fonts */
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Roboto:100,300,400,500,700');
+
+/*
+**
+**	Experience UI - 1
+**	Resets	
+**
+**
+*/
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+html { 
+	box-sizing:  border-box;
+	line-height: 1.15;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+
+/*
+**	Remendo margins dos browsers
+**
+*/
+body {
+	margin: 0;
+	overflow: hidden;
+}
+
+
+/*
+**	Display no IE 9
+**
+*/
+header,
+section,
+footer,
+article,
+nav,
+figure,
+main {
+	display: block;
+}
+
+figure {
+	margin: 1em 40px;
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+
+
+/*
+**	Tamanho da font padrão
+**
+*/
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+
+/*
+**	Removendo background dos links
+**
+*/
+a {
+	background-color: transparent;
+	-webkit-text-decoration-skip: object;
+}
+
+
+/*
+**	Configurações para o framework
+**
+*/
+b, strong {
+	font-weight: inherit;
+}
+b, strong {
+	font-weight: bolder;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	position: relative;
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: baseline;
+}
+	sup {
+		top: -0.5em;
+	}
+	sub {
+		bottom: -0.25em
+	}
+
+img {
+	border-style: none;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+
+/*
+**
+**	Experience UI - 1
+**	Componentes para Formulário	
+**
+**
+*/
+input,
+button,
+select,
+textarea {
+	font-family: Roboto, sans-serif;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+
+button,
+input {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+html[type="button"],[type="reset"],[type="submit"] {
+	-webkit-appearance: button;
+}
+
+
+/*
+**	Removendo bordas
+**
+*/
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted Buttontext;
+}
+
+
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+
+
+progress {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+textarea {
+	overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+[type="search"] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+}
+
+menu {
+	display: block;
+}
+
+[hidden] {
+	display: none;
+}
+
+
+/*
+**
+**	Experience UI - 1
+**	Botões	
+**
+**
+*/
+
+.io.button,
+.io.botao {
+	cursor: pointer;
+	display: inline-block;
+	min-height: 1em;
+	outline: none;
+	border: none;
+	vertical-align: baseline;
+	background: hsl(0, 0%, 93.7%);
+	color: rgba(0, 0, 0, 0.7);
+	font-family: Roboto, sans-serif, 'Lato';
+	margin: 0em 0.25em 0em 0em;
+	padding: 0.78571429em 1.5em 0.78571429em;
+	text-transform: none;
+	text-shadow: none;
+	font-size: 0.95857143rem;
+	font-weight: 400;
+	line-height: 1em;
+	font-style: normal;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 0.28571429rem;
+	box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+	transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+	will-change: '';
+	-webkit-tap-highlight-color: transparent;
+}
+	.io.button:hover,
+	.io.botao:hover {
+		background-color: hsl(0, 2%, 90.4%);
+		background-image: none;
+		box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+		color: rgba(0, 0, 0, 0.9);
+	}
+.io.button:hover .icon,
+.io.botao:hover .icon {
+	opacity: 0.85;
+}
+
+
+.io.button:focus,
+.io.botao:focus {
+	background-color: hsl(0, 2%, 90.4%);
+	color: rgba(0, 0, 0, 0.9);
+	background-image: '' !important;
+	box-shadow: '' !important;
+}
+
+.io.button:focus .icon,
+.io.botao:focus .icon {
+	opacity: 0.85;
+}
+
+
+.io.button:active,
+.io.active.button:active,
+.io.botao:active,
+.io.active.botao:active {
+	background-color: hsl(0, 9.7%, 87.8%);
+	color: rgba(0, 0, 0, 0.9);
+	background-image: '' !important;
+	box-shadow: 0px 0px 0px 1px transparent inset, none;
+}
+
+
+/*
+**	Active para botão
+**
+*/
+.io.button.active,
+.io.botao.ativo {
+	background-color: hsl(0, 9.7%, 87.8%);
+	background-image: none;
+	box-shadow: 0px 0px 0px 1px transparent inset;
+	color: rgba(0, 0, 0, 0.75);
+}
+
+
+.io.button.active:hover,
+.io.botao.ativo:hover {
+	background-color: hsl(0, 6%, 83.7%);
+	background-image: none;
+	box-shadow: 0px 0px 0px 1px transparent inset;
+	color: rgba(0, 0, 0, 0.80);
+}
+
+
+.io.button.active:active,
+.io.botao.ativo:active {
+	background-color: hsl(0, 10.4%, 81.2%);
+	background-image: none;
+	box-shadow: 0px 0px 0px 1px transparent inset;
+	color: rgba(0, 0, 0, 0.80);
+}
+
+
+/*
+**	Loading para botão
+**
+*/
+.io.button.loading,
+.io.botao.carregando {
+	position: relative;
+	padding-right: 3.35rem;
+	cursor: default;
+	text-shadow: none !important;
+	opacity: 1;
+	pointer-events: auto;
+	-webkit-transition: all 200ms ease, opacity 0.1s ease;
+	transition: all 200ms ease, opacity 0.1s ease;
+}
+	.io.button.loading:before,
+	.io.botao.carregando:before {
+		content: '';
+		box-sizing: border-box;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		border-top: 2px solid #5d7081;
+		border-right: 2px solid transparent;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-ms-border-radius: 50%;
+		-o-border-radius: 50%;
+		border-radius: 50%;
+		-webkit-animation: m-loader-rotate 0.6s linear infinite;
+	    -moz-animation: m-loader-rotate 0.6s linear infinite;
+	    -ms-animation: m-loader-rotate 0.6s linear infinite;
+	    -o-animation: m-loader-rotate 0.6s linear infinite;
+	    animation: m-loader-rotate 0.6s linear infinite;
+	}
+	.io.button.loading:before,
+	.io.botao.carregando:before {
+		
+		width: 1.4rem;
+		height: 1.4rem;
+		margin-top: -0.7rem;
+		margin-left: -0.7rem;
+		border-top-width: 2px;
+		border-right-width: 2px;
+	}
+
+	.io.button.loading:before,
+	.io.botao.carregando:before {
+		left: auto;
+		right: 0.7rem;
+	}
+
+@-webkit-keyframes m-loader-rotate {
+  to {
+    transform: rotate(360deg); } }
+
+@-moz-keyframes m-loader-rotate {
+  to {
+    transform: rotate(360deg); } }
+
+@-o-keyframes m-loader-rotate {
+  to {
+    transform: rotate(360deg); } }
+
+@keyframes m-loader-rotate {
+  to {
+    transform: rotate(360deg); } 
+}
+
+
+/*
+**	Botão desativado
+**
+*/
+.io.buttons .button.disabled,
+.io.botoes .botao.desativado,
+.io.button.disabled,
+.io.botao.desativado,
+.io.button:disabled,
+.io.botao:disabled,
+.io.button.disabled:hover,
+.io.botao.desativado:hover,
+.io.button.active.disabled,
+.io.button.ativo.desativado {
+	cursor: default;
+  	opacity: 0.45 !important;
+  	background-image: none !important;
+  	box-shadow: none !important;
+  	pointer-events: none !important;
+}
+
+
+/*
+**	Botão com icone 
+**
+*/
+.io.button > .icon:not(.button),
+.io.botao > .icone:not(.botao) {
+	height: 0.85714286em;
+	opacity: 0.8;
+	margin: 0em 0.42857143em 0em -0.21428571em;
+	vertical-align: '';
+	color: '';
+	transition: opacity 0.1s ease;
+	-webkit-transition: opacity 0.1s ease;
+}
+.io.button:not(.icon) > .icon:not(.button):not(.dropdown),
+.io.botao:not(.icone) > .icone:not(.botao):not(.dropdown) {
+	margin: 0em 0.42857143em 0em -0.21428571em;
+}
+
+
+/*
+**	Posição do botão
+**
+*/
+.io[class*="float left"].buttons,
+.io[class*="flutuar esquerda"].botoes,
+.io[class*="float left"].button,
+.io[class*="flutuar esquerda"].botao {
+	float: left;
+	margin-left: 0em;
+	margin-right: 0.25em;
+}
+
+
+.io[class*="float right"].buttons,
+.io[class*="flutuar direita"].botoes,
+.io[class*="float right"].button,
+.io[class*="flutuar direita"].botao {
+	float: right;
+	margin-left: 0em;
+	margin-right: 0.25em;
+}
+
+
+/*
+**	Botão compacto
+**
+*/
+.io.buttons.compact .button,
+.io.botoes.compacto .botao,
+.io.button.compact,
+.io.botao.compacto {
+	padding: 0.58928571em 1.125em 0.58928571em;
+}
+
+
+/*
+**	Tamanhos
+**
+*/
+.io.buttons.minu .button,
+.io.botoes.minu .botao,
+.io.button.minu,
+.io.botao.minu {
+	font-size: 0.78571429rem;
+}
+
+
+.io.buttons.mini .button,
+.io.botoes.mini .botao,
+.io.button.mini,
+.io.botao.mini {
+	font-size: 0.85714286rem;
+}
+
+
+.io.buttons.small .button,
+.io.botoes.pequeno .botao,
+.io.button.small,
+.io.botao.pequeno {
+	font-size: 0.92857143rem;
+}
+
+
+.io.buttons .button,
+.io.botoes .botao,
+.io.button,
+.io.botao {
+	font-size: 0.95857143rem;
+}
+
+
+.io.buttons.large .button,
+.io.botoes.largo .botao,
+.io.button.large,
+.io.botao.largo {
+	font-size: 1.14285714rem;
+}
+
+
+/*
+**	Somente ícone
+**
+*/
+.io.buttons.icon .button,
+.io.botoes.icone .botao,
+.io.button.icon,
+.io.botao.icone {
+	padding: 0.78571429em 0.78571429em 0.78571429em;
+}
+.io.buttons.icon .button > .icon,
+.io.botoes.icone .botao > .icone,
+.io.button.icon > .icon,
+.io.botao.icone > .icone {
+	opacity: 0.9;
+	margin: 0em !important;
+	vertical-align: top;
+}
+
+
+/*
+**	Modelos de Botões
+**
+*/
+.io.buttons.basic .button
+.io.botoes.basico .botao,
+.io.button.basic,
+.io.botao.basico {
+	background: transparent none !important;
+	color: rgba(5, 4, 4, 0.63) !important;
+	font-weight: normal;
+	border-radius: 0.2rem;
+	text-transform: none;
+	text-shadow: none !important;
+	border:  1px solid #ebedf2;
+}
+
+
+.io.buttons.basic,
+.io.botoes.basico {
+	box-shadow: none;
+	border:  1px solid #ebedf2;
+	border-radius: 0.28571429rem;
+}
+
+
+.io.buttons.basic .button:hover,
+.io.butoes.basico .botao:hover,
+.io.button.basic:hover,
+.io.botao.basico:hover {
+	border-color: #e4e7ed ;
+	background-color: #f5f5f5 !important;
+	color: rgba(0, 0, 0, 0.8) !important;
+}
+
+
+.io.buttons.basic .button:focus,
+.io.butoes.basico .botao:focus,
+.io.button.basic:focus,
+.io.botao.basico:focus {
+	border-color: #e4e7ed ;
+	background-color: #f5f5f5 !important;
+	color: rgba(0, 0, 0, 0.8) !important;
+}
+
+
+.io.buttons.basic .button:active,
+.io.butoes.basico .botao:active,
+.io.button.basic:active,
+.io.botao.basico:active {
+	border-color: #e4e7ed ;
+	background-color: #F8F8F8 !important;
+	color: rgba(0, 0, 0, 0.9) !important;
+	box-shadow: 0px 1px 4px 0px rgba(34, 36, 38, 0.15) inset;
+}
+
+
+/***********************
+	Basico Azul
+************************/
+.io.buttons.basic-blue .button,
+.io.botoes.basic-azul .button,
+.io.button.basic-blue,
+.io.botao.basico-azul {
+	background: #4fc3f7;
+	color: rgba(255, 255, 255, 255);
+	border:  1px solid #4fc3f7;
+}
+
+
+
+/***********************
+	Basico com sombra
+************************/
+.io.buttons.basic-blue.shadow .button,
+.io.botoes.basic-azul.sombra .button,
+.io.button.basic-blue.shadow,
+.io.botao.basico-azul.sombra {
+	box-shadow: 0px 7px 20px -5px #ccc;
+}
+
+
+.io.buttons.basic-blue .button:hover,
+.io.butoes.basico-azul .botao:hover,
+.io.button.basic-blue:hover,
+.io.botao.basico-azul:hover {
+	border-color: #4fc3f7 ;
+	background-color: #57AEF5 !important;
+	color: rgba(255, 255, 255, 255);
+}
+
+
+.io.buttons.basic-blue .button:focus,
+.io.butoes.basico-azul .botao:focus,
+.io.button.basic-blue:focus,
+.io.botao.basico-azul:focus {
+	border-color: #4fc3f7 ;
+	background-color: #57AEF5 !important;
+	color: rgba(255, 255, 255, 255);
+}
+
+
+.io.buttons.basic-blue .button:active,
+.io.butoes.basico-azul .botao:active,
+.io.button.basic-blue:active,
+.io.botao.basico-azul:active {
+	border-color: #e4e7ed ;
+	background-color: #43A4F3 !important;
+	color: rgb(252, 250, 250) !important;
+	box-shadow: 5px 5px 5px 0px rgba(34, 36, 38, 0.15) inset;
+}
+
+
+/***********************
+	Basico verde
+************************/
+.io.buttons.basic-green .button,
+.io.botoes.basic-verde .button,
+.io.button.basic-green,
+.io.botao.basico-verde {
+	background: #29E5C4;
+	color: rgba(255, 255, 255, 255);
+	border:  1px solid #29E5C4;
+	transition: all ease 200ms;
+}
+
+
+
+/***********************
+	Basico com sombra
+************************/
+.io.buttons.basic-green.shadow .button,
+.io.botoes.basic-verde.sombra .button,
+.io.button.basic-green.shadow,
+.io.botao.basico-verde.sombra {
+	box-shadow: 0px 7px 20px -5px #ccc;
+}
+
+
+.io.buttons.basic-green .button:hover,
+.io.butoes.basico-verde .botao:hover,
+.io.button.basic-green:hover,
+.io.botao.basico-verde:hover {
+	border-color: #29E5C4 ;
+	background-color: #27D7B8 !important;
+	color: rgba(255, 255, 255, 255);
+}
+
+
+.io.buttons.basic-green .button:focus,
+.io.butoes.basico-verde .botao:focus,
+.io.button.basic-green:focus,
+.io.botao.basico-verde:focus {
+	border-color: #29E5C4 ;
+	background-color: #27D7B8 !important;
+	color: rgba(255, 255, 255, 255);
+}
+
+
+.io.buttons.basic-green .button:active,
+.io.butoes.basico-verde .botao:active,
+.io.button.basic-green:active,
+.io.botao.basico-verde:active {
+	border-color: #29E5C4 ;
+	background-color: #29E5C4 !important;
+	color: rgb(252, 250, 250) !important;
+	box-shadow: 5px 5px 5px 0px rgba(34, 36, 38, 0.15) inset;
+	transform: scale(.9);
+}
+
+
+/***********************
+	Basico Transparent
+************************/
+.io.botoes.basico-acao .botao,
+.io.botao.basico-acao {
+	background: transparent none !important;
+	color: rgba(5, 4, 4, 0.63) !important;
+	font-weight: normal;
+	font-size: 12px;
+	border-radius: 50%;
+	text-transform: none;
+	text-shadow: none !important;
+	box-shadow: none;
+	transition: all ease-in 200ms;
+    margin: 0 5px;
+}
+
+.io.botoes.basico-acao {
+	box-shadow: none;
+	border:  1px solid #ebedf2;
+	border-radius: 0.28571429rem;
+}
+
+
+.io.butoes.basico-acao .botao:hover,
+.io.botao.basico-acao:hover {
+	border-color: #e4e7ed ;
+	/* background-color: #f5f5f5 !important; */
+	color: rgba(255, 255, 255, 0.97) !important;
+	box-shadow: inset 0 1px;
+}
+
+.io.botao.basico-acao.excluir:hover {
+	color: #cc4f4c !important;
+}
+
+
+.io.buttons.basic .button:focus,
+.io.butoes.basico .botao:focus,
+.io.button.basic:focus,
+.io.botao.basico:focus {
+	border-color: #e4e7ed ;
+	background-color: #f5f5f5 !important;
+	color: rgba(0, 0, 0, 0.8) !important;
+}
+
+
+.io.buttons.basic .button:active,
+.io.butoes.basico .botao:active,
+.io.button.basic:active,
+.io.botao.basico:active {
+	border-color: #e4e7ed ;
+	background-color: #F8F8F8 !important;
+	color: rgba(0, 0, 0, 0.9) !important;
+	box-shadow: 0px 1px 4px 0px rgba(34, 36, 38, 0.15) inset;
+}
+
+
+/***********************
+	Botão Arredondado
+************************/
+.io.buttons.round .button,
+.io.botoes.redondo .botao,
+.io.button.round,
+.io.botao.redondo {
+	background: transparent none !important;
+	color: rgba(5, 4, 4, 0.63) !important;
+	font-weight: normal;
+	border-radius: 5rem;
+	text-transform: none;
+	text-shadow: none !important;
+	border:  1px solid #ebedf2
+}
+
+
+.io.buttons.round .button:hover,
+.io.butoes.redondo .botao:hover,
+.io.button.round:hover,
+.io.botao.redondo:hover {
+	border-color: #e4e7ed ;
+	background-color: #f5f5f5 !important;
+	color: rgba(0, 0, 0, 0.8) !important;
+}
+
+
+.io.buttons.round .button:focus,
+.io.butoes.redondo .botao:focus,
+.io.button.round:focus,
+.io.botao.redondo:focus {
+	border-color: #e4e7ed ;
+	background-color: #f5f5f5 !important;
+	color: rgba(0, 0, 0, 0.8) !important;
+}
+
+
+.io.buttons.round .button:active,
+.io.butoes.redondo .botao:active,
+.io.button.round:active,
+.io.botao.redondo:active {
+	border-color: #e4e7ed ;
+	background-color: #F8F8F8 !important;
+	color: rgba(0, 0, 0, 0.9) !important;
+	box-shadow: 0px 1px 4px 0px rgba(34, 36, 38, 0.15) inset;
+}
+
+
+/***********************
+	Arredondado Azul
+************************/
+.io.buttons.round-blue .button,
+.io.botoes.redondo-azul .botao,
+.io.button.round-blue,
+.io.botao.redondo-azul {
+	background: #4fc3f7;
+	color: rgba(255, 255, 255, 255);
+	border:  1px solid #4fc3f7;
+	border-radius: 5rem;
+}
+
+
+/***********************
+	Arredondado com sombra
+************************/
+.io.buttons.round-blue.shadow .button,
+.io.botoes.redondo-azul.sombra .button,
+.io.button.round-blue.shadow,
+.io.botao.redondo-azul.sombra {
+	box-shadow: 0px 9px 11px -5px #ccc;
+}
+
+
+.io.buttons.round-blue .button:hover,
+.io.butoes.redondo-azul .botao:hover,
+.io.button.round-blue:hover,
+.io.botao.redondo-azul:hover {
+	border-color: #4fc3f7 ;
+	background-color: #57AEF5 !important;
+	color: rgba(255, 255, 255, 255);
+}
+
+
+.io.buttons.round-blue .button:focus,
+.io.butoes.redondo-azul .botao:focus,
+.io.button.round-blue:focus,
+.io.botao.redondo-azul:focus {
+	border-color: #4fc3f7 ;
+	background-color: #57AEF5 !important;
+	color: rgba(255, 255, 255, 255);
+}
+
+
+.io.buttons.round-blue .button:active,
+.io.butoes.redondo-azul .botao:active,
+.io.button.round-blue:active,
+.io.botao.redondo-azul:active {
+	border-color: #e4e7ed ;
+	background-color: #43A4F3 !important;
+	color: rgb(252, 250, 250) !important;
+	box-shadow: 5px 5px 5px 0px rgba(34, 36, 38, 0.15) inset;
+}
+
+/***********************
+	Basico Vermelho
+************************/
+.io.buttons.basic-red .button,
+.io.botoes.basic-vermelho .button,
+.io.button.basic-red,
+.io.botao.basico-vermelho {
+	background: #f4516c;
+	color: rgba(255, 255, 255, 255);
+	border:  1px solid #f4516c;
+	transition: all ease 200ms;
+}
+
+.io.buttons.basic-red .button:hover,
+.io.butoes.basico-vermelho .botao:hover,
+.io.button.basic-red:hover,
+.io.botao.basico-vermelho:hover {
+	border-color: #f12143 ;
+	background-color: #f22d4e !important;
+	color: rgba(255, 255, 255, 255);
+}
+
+
+.io.buttons.basic-red .button:focus,
+.io.butoes.basico-vermelho .botao:focus,
+.io.button.basic-red:focus,
+.io.botao.basico-vermelho:focus {
+	border-color: #f4516c ;
+	background-color: #f4516c !important;
+	color: rgba(255, 255, 255, 255);
+}
+
+
+.io.buttons.basic-red .button:active,
+.io.butoes.basico-vermelho .botao:active,
+.io.button.basic-red:active,
+.io.botao.basico-vermelho:active {
+	border-color: #f01539 ;
+	background-color: #f12143 !important;
+	color: rgb(252, 250, 250) !important;
+	box-shadow: 5px 5px 5px 0px rgba(34, 36, 38, 0.15) inset;
+	-webkit-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+/*
+**	Botão Fluido
+**
+*/
+.io.buttons.fluid,
+.io.botoes.fluido,
+.io.button.fluid,
+.io.botao.fluido {
+	width: 100%;
+}
+
+
+.io.button.fluid,
+.io.botao.fluido {
+	display: block;
+}
+
+
+/*
+**
+**	Experience UI - 1
+**	Grid	
+**
+**
+*/
+.io.grid {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-align: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+	padding: 0em;
+}
+
+
+.io.grid {
+	margin: -1rem;
+}
+
+.io.grid + .grid {
+	margin-top: 1rem;
+}
+
+
+.io.grid > .row > img,
+.io.grid > .linha > img,
+.io.grid > .row > .column > img,
+.io.grid > .linha > .coluna  {
+	max-width: 100%;
+}
+
+.io.grid > .io.grid:first-child {
+	margin-top: 0em;
+}
+
+.io.grid > .io.grid:last-child {
+	margin-bottom: 0em;
+}
+
+
+/*
+**	Coluna
+**
+*/
+.io.grid > .column:not(.row),
+.io.grid > .coluna:not(.linha),
+.io.grid > .row > .column,
+.io.grid > .linha > .coluna {
+	position: relative;
+	display: inline-block;
+	width: 6.25%;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	vertical-align: top;
+}
+
+
+.io.grid > .column:not(.row),
+.io.grid > .coluna:not(.linha) {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+
+.io.grid > .row > .column,
+.io.grid > .linha > .coluna {
+	margin-top: 0em;
+	margin-bottom: 0em;
+}
+
+/*
+**	Linha
+**
+*/
+.io.grid > .row,
+.io.grid > .linha {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-align: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+	padding: 0rem;
+	width: 100% !important;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+
+}
+
+
+/*
+**	Media Query
+**
+*/
+@media only screen and (max-width: 767px) {
+  .ui.page.grid {
+    width: auto;
+    padding-left: 0em;
+    padding-right: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ui.grid {
+    width: auto;
+    margin-left: 0em;
+    margin-right: 0em;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ui.grid {
+    width: auto;
+    margin-left: 0em;
+    margin-right: 0em;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+  .ui.grid {
+    width: auto;
+    margin-left: 0em;
+    margin-right: 0em;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .ui.grid {
+    width: auto;
+    margin-left: 0em;
+    margin-right: 0em;
+    padding-left: 23%;
+    padding-right: 23%;
+  }
+}
+
+
+/*
+**	Variações do Grid
+**
+*/
+.io.grid > .column:only-child,
+.io.grid > .coluna:only-child,
+.io.grid > .row > .column:only-child,
+.io.grid > .linha > .coluna:only-child {
+	width: 100%;
+}
+
+
+/*
+**	Tamanho da coluna no grid
+**
+*/
+.io[class*="one column"].grid > .row > .column,
+.io[class*="uma coluna"].grid > .linha > .coluna,
+.io[class*="one column"].grid > .column:not(.row),
+.io[class*="uma coluna"].grid > .coluna:not(.linha) {
+  width: 100%;
+}
+.io[class*="two column"].grid > .row > .column,
+.io[class*="duas coluna"].grid > .linha > .coluna,
+.io[class*="two column"].grid > .column:not(.row),
+.io[class*="duas coluna"].grid > .coluna:not(.linha) {
+  width: 50%;
+}
+.io[class*="three column"].grid > .row > .column,
+.io[class*="tres coluna"].grid > .linha > .coluna,
+.io[class*="three column"].grid > .column:not(.row),
+.io[class*="tres coluna"].grid > .coluna:not(.linha) {
+  width: 33.33333333%;
+}
+.io[class*="four column"].grid > .row > .column,
+.io[class*="quatro coluna"].grid > .linha > .coluna,
+.io[class*="four column"].grid > .column:not(.row),
+.io[class*="quatro coluna"].grid > .coluna:not(.linha) {
+  width: 25%;
+}
+.io[class*="five column"].grid > .row > .column,
+.io[class*="cinco coluna"].grid > .linha > .coluna,
+.io[class*="five column"].grid > .column:not(.row),
+.io[class*="cinco coluna"].grid > .coluna:not(.linha) {
+  width: 20%;
+}
+.io[class*="six column"].grid > .row > .column,
+.io[class*="seis coluna"].grid > .linha > .coluna,
+.io[class*="six column"].grid > .column:not(.row),
+.io[class*="seis coluna"].grid > .coluna:not(.linha) {
+  width: 16.66666667%;
+}
+.io[class*="seven column"].grid > .row > .column,
+.io[class*="sete coluna"].grid > .linha > .coluna,
+.io[class*="seven column"].grid > .column:not(.row),
+.io[class*="sete coluna"].grid > .coluna:not(.linha) {
+  width: 14.28571429%;
+}
+.io[class*="eight column"].grid > .row > .column,
+.io[class*="oito coluna"].grid > .linha > .coluna,
+.io[class*="eight column"].grid > .column:not(.row),
+.io[class*="oito coluna"].grid > .coluna:not(.linha) {
+  width: 12.5%;
+}
+.io[class*="nine column"].grid > .row > .column,
+.io[class*="nove coluna"].grid > .linha > .coluna,
+.io[class*="nine column"].grid > .column:not(.row),
+.io[class*="nove coluna"].grid > .coluna:not(.linha) {
+  width: 11.11111111%;
+}
+.io[class*="ten column"].grid > .row > .column,
+.io[class*="dez coluna"].grid > .linha > .coluna,
+.io[class*="ten column"].grid > .column:not(.row),
+.io[class*="dez coluna"].grid > .coluna:not(.linha) {
+  width: 10%;
+}
+.io[class*="eleven column"].grid > .row > .column,
+.io[class*="onze coluna"].grid > .linha > .coluna,
+.io[class*="eleven column"].grid > .column:not(.row),
+.io[class*="onze coluna"].grid > .coluna:not(.linha) {
+  width: 9.09090909%;
+}
+.io[class*="twelve column"].grid > .row > .column,
+.io[class*="doze coluna"].grid > .linha > .coluna,
+.io[class*="twelve column"].grid > .column:not(.row),
+.io[class*="doze coluna"].grid > .coluna:not(.linha) {
+  width: 8.33333333%;
+}
+.io[class*="thirteen column"].grid > .row > .column,
+.io[class*="treze coluna"].grid > .linha > .coluna,
+.io[class*="thirteen column"].grid > .column:not(.row),
+.io[class*="treze coluna"].grid > .coluna:not(.linha) {
+  width: 7.69230769%;
+}
+.io[class*="fourteen column"].grid > .row > .column,
+.io[class*="quatorze coluna"].grid > .linha > .coluna,
+.io[class*="fourteen column"].grid > .column:not(.row),
+.io[class*="quatorze coluna"].grid > .coluna:not(.linha) {
+  width: 7.14285714%;
+}
+.io[class*="quinze column"].grid > .row > .column,
+.io[class*="fifteen coluna"].grid > .linha > .coluna,
+.io[class*="quinze column"].grid > .column:not(.row),
+.io[class*="fifteen coluna"].grid > .coluna:not(.linha) {
+  width: 6.66666667%;
+}
+.io[class*="sixteen column"].grid > .row > .column,
+.io[class*="dezesseis coluna"].grid > .linha > .coluna,
+.io[class*="sixteen column"].grid > .column:not(.row),
+.io[class*="dezesseis coluna"].grid > .coluna:not(.linha) {
+  width: 6.25%;
+}
+
+
+/*
+**	Variações na coluna
+**
+*/
+.io.grid > .row > [class*="one wide"].column,
+.io.grid > .linha > [class*="uma wide"].coluna,
+.io.grid > .column.row > [class*="one wide"].column,
+.io.grid > .coluna.linha > [class*="uma wide"].coluna,
+.io.grid > [class*="one wide"].column,
+.io.grid > [class*="uma wide"].coluna,
+.io.column.grid > [class*="one wide"].column,
+.io.coluna.grid > [class*="uma wide"].coluna {
+  width: 6.25% !important;
+}
+.io.grid > .row > [class*="two wide"].column,
+.io.grid > .linha > [class*="duas wide"].coluna,
+.io.grid > .column.row > [class*="two wide"].column,
+.io.grid > .coluna.linha > [class*="duas wide"].coluna,
+.io.grid > [class*="two wide"].column,
+.io.grid > [class*="duas wide"].coluna,
+.io.column.grid > [class*="two wide"].column,
+.io.coluna.grid > [class*="duas wide"].coluna {
+  width: 12.5% !important;
+}
+.io.grid > .row > [class*="three wide"].column,
+.io.grid > .linha > [class*="tres wide"].coluna,
+.io.grid > .column.row > [class*="three wide"].column,
+.io.grid > .coluna.linha > [class*="tres wide"].coluna,
+.io.grid > [class*="three wide"].column,
+.io.grid > [class*="tres wide"].coluna,
+.io.column.grid > [class*="three wide"].column,
+.io.coluna.grid > [class*="tres wide"].coluna {
+  width: 18.75% !important;
+}
+.io.grid > .row > [class*="four wide"].column,
+.io.grid > .linha > [class*="quatro wide"].coluna,
+.io.grid > .column.row > [class*="four wide"].column,
+.io.grid > .coluna.linha > [class*="quatro wide"].coluna,
+.io.grid > [class*="four wide"].column,
+.io.grid > [class*="quatro wide"].coluna,
+.io.column.grid > [class*="four wide"].column,
+.io.coluna.grid > [class*="quatro wide"].coluna {
+  width: 25% !important;
+}
+.io.grid > .row > [class*="five wide"].column,
+.io.grid > .linha > [class*="cinco wide"].coluna,
+.io.grid > .column.row > [class*="five wide"].column,
+.io.grid > .coluna.linha > [class*="cinco wide"].coluna,
+.io.grid > [class*="five wide"].column,
+.io.grid > [class*="cinco wide"].coluna,
+.io.column.grid > [class*="five wide"].column,
+.io.coluna.grid > [class*="cinco wide"].coluna {
+  width: 31.25% !important;
+}
+.io.grid > .row > [class*="six wide"].column,
+.io.grid > .linha > [class*="seis wide"].coluna,
+.io.grid > .column.row > [class*="six wide"].column,
+.io.grid > .coluna.linha > [class*="seis wide"].coluna,
+.io.grid > [class*="six wide"].column,
+.io.grid > [class*="seis wide"].coluna,
+.io.column.grid > [class*="six wide"].column,
+.io.coluna.grid > [class*="seis wide"].coluna {
+  width: 37.5% !important;
+}
+.io.grid > .row > [class*="seven wide"].column,
+.io.grid > .linha > [class*="sete wide"].coluna,
+.io.grid > .column.row > [class*="seven wide"].column,
+.io.grid > .coluna.linha > [class*="sete wide"].coluna,
+.io.grid > [class*="seven wide"].column,
+.io.grid > [class*="sete wide"].coluna,
+.io.column.grid > [class*="seven wide"].column,
+.io.coluna.grid > [class*="sete wide"].coluna {
+  width: 43.75% !important;
+}
+.io.grid > .row > [class*="eight wide"].column,
+.io.grid > .linha > [class*="oito wide"].coluna,
+.io.grid > .column.row > [class*="eight wide"].column,
+.io.grid > .coluna.linha > [class*="oito wide"].coluna,
+.io.grid > [class*="eight wide"].column,
+.io.grid > [class*="oito wide"].coluna,
+.io.column.grid > [class*="eight wide"].column,
+.io.coluna.grid > [class*="oito wide"].coluna {
+  width: 50% !important;
+}
+.io.grid > .row > [class*="nine wide"].column,
+.io.grid > .linha > [class*="nove wide"].coluna,
+.io.grid > .column.row > [class*="nine wide"].column,
+.io.grid > .coluna.linha > [class*="nove wide"].coluna,
+.io.grid > [class*="nine wide"].column,
+.io.grid > [class*="nove wide"].coluna,
+.io.column.grid > [class*="nine wide"].column,
+.io.coluna.grid > [class*="nove wide"].coluna {
+  width: 56.25% !important;
+}
+.io.grid > .row > [class*="ten wide"].column,
+.io.grid > .linha > [class*="dez wide"].coluna,
+.io.grid > .column.row > [class*="ten wide"].column,
+.io.grid > .coluna.linha > [class*="dez wide"].coluna,
+.io.grid > [class*="ten wide"].column,
+.io.grid > [class*="dez wide"].coluna,
+.io.column.grid > [class*="ten wide"].column,
+.io.coluna.grid > [class*="dez wide"].coluna {
+  width: 62.5% !important;
+}
+.io.grid > .row > [class*="eleven wide"].column,
+.io.grid > .linha > [class*="onze wide"].coluna,
+.io.grid > .column.row > [class*="eleven wide"].column,
+.io.grid > .coluna.linha > [class*="onze wide"].coluna,
+.io.grid > [class*="eleven wide"].column,
+.io.grid > [class*="onze wide"].coluna,
+.io.column.grid > [class*="eleven wide"].column
+.io.coluna.grid > [class*="onze wide"].coluna {
+  width: 68.75% !important;
+}
+.io.grid > .row > [class*="twelve wide"].column,
+.io.grid > .linha > [class*="doze wide"].coluna,
+.io.grid > .column.row > [class*="twelve wide"].column,
+.io.grid > .coluna.linha > [class*="doze wide"].coluna,
+.io.grid > [class*="twelve wide"].column,
+.io.grid > [class*="doze wide"].coluna,
+.io.column.grid > [class*="twelve wide"].column,
+.io.coluna.grid > [class*="doze wide"].coluna {
+  width: 75% !important;
+}
+.io.grid > .row > [class*="thirteen wide"].column,
+.io.grid > .linha > [class*="treze wide"].coluna,
+.io.grid > .column.row > [class*="thirteen wide"].column,
+.io.grid > .coluna.linha > [class*="treze wide"].coluna,
+.io.grid > [class*="thirteen wide"].column,
+.io.grid > [class*="treze wide"].coluna,
+.io.column.grid > [class*="thirteen wide"].column,
+.io.coluna.grid > [class*="treze wide"].coluna {
+  width: 81.25% !important;
+}
+.io.grid > .row > [class*="fourteen wide"].column,
+.io.grid > .linha > [class*="quatorze wide"].coluna,
+.io.grid > .column.row > [class*="fourteen wide"].column,
+.io.grid > .coluna.linha > [class*="quatorze wide"].coluna,
+.io.grid > [class*="fourteen wide"].column,
+.io.grid > [class*="quatorze wide"].coluna,
+.io.column.grid > [class*="fourteen wide"].column,
+.io.coluna.grid > [class*="quatorze wide"].coluna {
+  width: 87.5% !important;
+}
+.io.grid > .row > [class*="fifteen wide"].column,
+.io.grid > .linha > [class*="quinze wide"].coluna,
+.io.grid > .column.row > [class*="fifteen wide"].column,
+.io.grid > .coluna.linha > [class*="quinze wide"].coluna,
+.io.grid > [class*="fifteen wide"].column,
+.io.grid > [class*="quinze wide"].coluna,
+.io.column.grid > [class*="fifteen wide"].column,
+.io.coluna.grid > [class*="quinze wide"].coluna {
+  width: 93.75% !important;
+}
+.io.grid > .row > [class*="sixteen wide"].column,
+.io.grid > .linha > [class*="dezesseis wide"].coluna,
+.io.grid > .column.row > [class*="sixteen wide"].column,
+.io.grid > .coluna.linha > [class*="dezesseis wide"].coluna,
+.io.grid > [class*="sixteen wide"].column,
+.io.grid > [class*="dezesseis wide"].coluna,
+.io.column.grid > [class*="sixteen wide"].column,
+.io.coluna.grid > [class*="dezesseis wide"].coluna {
+  width: 100% !important;
+}
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+.io.grid > .row > [class*="one wide mobile"].column,
+.io.grid > .linha > [class*="uma wide mobile"].coluna,
+.io.grid > .column.row > [class*="one wide mobile"].column,
+.io.grid > .coluna.linha > [class*="uma wide mobile"].coluna,
+.io.grid > [class*="one wide mobile"].column,
+.io.grid > [class*="uma wide mobile"].coluna,
+.io.column.grid > [class*="one wide mobile"].column,
+.io.coluna.grid > [class*="uma wide mobile"].coluna {
+  width: 6.25% !important;
+}
+.io.grid > .row > [class*="two wide mobile"].column,
+.io.grid > .linha > [class*="duas wide mobile"].coluna,
+.io.grid > .column.row > [class*="two wide mobile"].column,
+.io.grid > .coluna.linha > [class*="duas wide mobile"].coluna,
+.io.grid > [class*="two wide mobile"].column,
+.io.grid > [class*="duas wide mobile"].coluna,
+.io.column.grid > [class*="two wide mobile"].column,
+.io.coluna.grid > [class*="duas wide mobile"].coluna {
+  width: 12.5% !important;
+}
+.io.grid > .row > [class*="three wide mobile"].column,
+.io.grid > .linha > [class*="tres wide mobile"].coluna,
+.io.grid > .column.row > [class*="three wide mobile"].column,
+.io.grid > .coluna.linha > [class*="tres wide mobile"].coluna,
+.io.grid > [class*="three wide mobile"].column,
+.io.grid > [class*="tres wide mobile"].coluna,
+.io.column.grid > [class*="three wide mobile"].column,
+.io.coluna.grid > [class*="tres wide mobile"].coluna {
+  width: 18.75% !important;
+}
+.io.grid > .row > [class*="four wide mobile"].column,
+.io.grid > .linha > [class*="quatro wide mobile"].coluna,
+.io.grid > .column.row > [class*="four wide mobile"].column,
+.io.grid > .coluna.linha > [class*="quatro wide mobile"].coluna,
+.io.grid > [class*="four wide mobile"].column,
+.io.grid > [class*="quatro wide mobile"].coluna,
+.io.column.grid > [class*="four wide mobile"].column,
+.io.coluna.grid > [class*="quatro wide mobile"].coluna {
+  width: 25% !important;
+}
+.io.grid > .row > [class*="five wide mobile"].column,
+.io.grid > .linha > [class*="cinco wide mobile"].coluna,
+.io.grid > .column.row > [class*="five wide mobile"].column,
+.io.grid > .coluna.linha > [class*="cinco wide mobile"].coluna,
+.io.grid > [class*="five wide mobile"].column,
+.io.grid > [class*="cinco wide mobile"].coluna,
+.io.column.grid > [class*="five wide mobile"].column,
+.io.coluna.grid > [class*="cinco wide mobile"].coluna {
+  width: 31.25% !important;
+}
+.io.grid > .row > [class*="six wide mobile"].column,
+.io.grid > .linha > [class*="seis wide mobile"].coluna,
+.io.grid > .column.row > [class*="six wide mobile"].column,
+.io.grid > .coluna.linha > [class*="seis wide mobile"].coluna,
+.io.grid > [class*="six wide mobile"].column,
+.io.grid > [class*="seis wide mobile"].coluna,
+.io.column.grid > [class*="six wide mobile"].column,
+.io.coluna.grid > [class*="seis wide mobile"].coluna {
+  width: 37.5% !important;
+}
+.io.grid > .row > [class*="seven wide mobile"].column,
+.io.grid > .linha > [class*="sete wide mobile"].coluna,
+.io.grid > .column.row > [class*="seven wide mobile"].column,
+.io.grid > .coluna.linha > [class*="sete wide mobile"].coluna,
+.io.grid > [class*="seven wide mobile"].column,
+.io.grid > [class*="sete wide mobile"].coluna,
+.io.column.grid > [class*="seven wide mobile"].column,
+.io.coluna.grid > [class*="sete wide mobile"].coluna {
+  width: 43.75% !important;
+}
+.io.grid > .row > [class*="eight wide mobile"].column,
+.io.grid > .linha > [class*="oito wide mobile"].coluna,
+.io.grid > .column.row > [class*="eight wide mobile"].column,
+.io.grid > .coluna.linha > [class*="oito wide mobile"].coluna,
+.io.grid > [class*="eight wide mobile"].column,
+.io.grid > [class*="oito wide mobile"].coluna,
+.io.column.grid > [class*="eight wide mobile"].column,
+.io.coluna.grid > [class*="oito wide mobile"].coluna {
+  width: 50% !important;
+}
+.io.grid > .row > [class*="nine wide mobile"].column,
+.io.grid > .linha > [class*="nove wide mobile"].coluna,
+.io.grid > .column.row > [class*="nine wide mobile"].column,
+.io.grid > .coluna.linha > [class*="nove wide mobile"].coluna,
+.io.grid > [class*="nine wide mobile"].column,
+.io.grid > [class*="nove wide mobile"].coluna,
+.io.column.grid > [class*="nine wide mobile"].column,
+.io.coluna.grid > [class*="nove wide mobile"].coluna {
+  width: 56.25% !important;
+}
+.io.grid > .row > [class*="ten wide mobile"].column,
+.io.grid > .linha > [class*="dez wide mobile"].coluna,
+.io.grid > .column.row > [class*="ten wide mobile"].column,
+.io.grid > .coluna.linha > [class*="dez wide mobile"].coluna,
+.io.grid > [class*="ten wide mobile"].column,
+.io.grid > [class*="dez wide mobile mobile"].coluna,
+.io.column.grid > [class*="ten wide mobile"].column,
+.io.coluna.grid > [class*="dez wide mobile"].coluna {
+  width: 62.5% !important;
+}
+.io.grid > .row > [class*="eleven wide mobile"].column,
+.io.grid > .linha > [class*="onze wide mobile"].coluna,
+.io.grid > .column.row > [class*="eleven wide mobile"].column,
+.io.grid > .coluna.linha > [class*="onze wide mobile"].coluna,
+.io.grid > [class*="eleven wide mobile"].column,
+.io.grid > [class*="onze wide mobile"].coluna,
+.io.column.grid > [class*="eleven wide mobile"].column
+.io.coluna.grid > [class*="onze wide mobile"].coluna {
+  width: 68.75% !important;
+}
+.io.grid > .row > [class*="twelve wide mobile"].column,
+.io.grid > .linha > [class*="doze wide mobile"].coluna,
+.io.grid > .column.row > [class*="twelve wide mobile"].column,
+.io.grid > .coluna.linha > [class*="doze wide mobile mobile"].coluna,
+.io.grid > [class*="twelve wide mobile"].column,
+.io.grid > [class*="doze wide mobile"].coluna,
+.io.column.grid > [class*="twelve wide mobile"].column,
+.io.coluna.grid > [class*="doze wide mobile"].coluna {
+  width: 75% !important;
+}
+.io.grid > .row > [class*="thirteen wide mobile"].column,
+.io.grid > .linha > [class*="treze wide mobile"].coluna,
+.io.grid > .column.row > [class*="thirteen wide mobile"].column,
+.io.grid > .coluna.linha > [class*="treze wide mobile"].coluna,
+.io.grid > [class*="thirteen wide mobile"].column,
+.io.grid > [class*="treze wide"].coluna,
+.io.column.grid > [class*="thirteen wide mobile mobile"].column,
+.io.coluna.grid > [class*="treze wide mobile"].coluna {
+  width: 81.25% !important;
+}
+.io.grid > .row > [class*="fourteen wide mobile"].column,
+.io.grid > .linha > [class*="quatorze wide mobile"].coluna,
+.io.grid > .column.row > [class*="fourteen wide mobile"].column,
+.io.grid > .coluna.linha > [class*="quatorze wide mobile"].coluna,
+.io.grid > [class*="fourteen wide mobile"].column,
+.io.grid > [class*="quatorze wide mobile"].coluna,
+.io.column.grid > [class*="fourteen wide mobile"].column,
+.io.coluna.grid > [class*="quatorze wide mobile"].coluna {
+  width: 87.5% !important;
+}
+.io.grid > .row > [class*="fifteen wide mobile"].column,
+.io.grid > .linha > [class*="quinze wide mobile"].coluna,
+.io.grid > .column.row > [class*="fifteen wide mobile"].column,
+.io.grid > .coluna.linha > [class*="quinze wide mobile"].coluna,
+.io.grid > [class*="fifteen wide mobile"].column,
+.io.grid > [class*="quinze wide mobile"].coluna,
+.io.column.grid > [class*="fifteen wide mobile"].column,
+.io.coluna.grid > [class*="quinze wide mobile"].coluna {
+  width: 93.75% !important;
+}
+.io.grid > .row > [class*="sixteen wide mobile"].column,
+.io.grid > .linha > [class*="dezesseis wide mobile"].coluna,
+.io.grid > .column.row > [class*="sixteen wide mobile"].column,
+.io.grid > .coluna.linha > [class*="dezesseis wide mobile"].coluna,
+.io.grid > [class*="sixteen wide mobile"].column,
+.io.grid > [class*="dezesseis wide mobile"].coluna,
+.io.column.grid > [class*="sixteen wide mobile"].column,
+.io.coluna.grid > [class*="dezesseis wide mobile"].coluna {
+  width: 100% !important;
+}
+}
+
+
+/*
+**	Grid Centralizado
+**
+*/
+.io.center.grid,
+.io.centro.grid,
+.io.center.grid > .row,
+.io.centro.grid > .linha,
+.io.grid > .center.row,
+.io.grid > .centro.linha {
+	text-align: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.io.center.grid > .column:not(.aligned):not(.justified):not(.row),
+.io.centro.grid > .coluna:not(.alinhado):not(.justificado):not(.linha),
+.io.center.grid > .row > .column:not(.aligned):not(.justified),
+.io.centro.grid > .linha > .coluna:not(.alinhado):not(.justificado),
+.io.grid .center.row > .column:not(.aligned):not(.justified),
+.io.grid .centro.linha > .coluna:not(.alinhado):not(.justificado) {
+	text-align: left;
+}
+
+
+.io.grid > .center.column,
+.io.grid > .centro.coluna,
+.io.grid > .row > .center.column,
+.io.grid > .linha > .centro.coluna {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/*
+**
+**	Experience UI - 1
+**	Formulário	
+**
+**
+*/
+.io.form,
+.io.formulario {
+	position: relative;
+	max-width: 100%;
+}
+
+
+/*
+**	Campo
+**
+*/
+.io.form .field,
+.io.formulario .campo {
+	clear: both;
+	margin: 0em 0em 1em;
+}
+
+.io.form .field:last-child,
+.io.formulario .campo:last-child,
+.io.form .fields:last-child .filed,
+.io.formulario .campos:last-child .campo {
+	margin-bottom: 0em;
+}
+
+.io.form .fields .field,
+.io.formulario .campos .campo {
+	clear: both;
+	margin: 0;
+}
+
+
+/*
+**	Rótulo
+**
+*/
+.io.form .field > label,
+.io.formulario .campo > label {
+	font-family: Roboto, sans-serif, 'Lato';
+	display: block;
+	margin: 0em 0em 0.28571429rem 0em;
+	color: rgba(0, 0, 0, 0.87);
+	font-size: .83657143em;
+	font-weight: 500;
+	text-transform: none;
+}
+
+
+/*
+**	Padrão para Inputs
+**
+*/
+.io.form textarea,
+.io.formulario textarea,
+.io.form input:not([type]),
+.io.formulario input:not([type]),
+.io.form input[type="date"],
+.io.formulario input[type="date"],
+.io.form input[type="datetime-local"],
+.io.formulario input[type="datetime-local"],
+.io.form input[type="email"],
+.io.formulario input[type="email"],
+.io.form input[type="number"],
+.io.formulario input[type="number"],
+.io.form input[type="password"],
+.io.formulario input[type="password"],
+.io.form input[type="search"],
+.io.formulario input[type="search"],
+.io.form input[type="tel"],
+.io.formulario input[type="tel"],
+.io.form input[type="time"],
+.io.formulario input[type="time"],
+.io.form input[type="text"],
+.io.formulario input[type="text"],
+.io.form input[type="file"],
+.io.formulario input[type="file"],
+.io.form input[type="url"]
+.io.formulario input[type="url"] {
+	width: 100%;
+	vertical-align: top;
+}
+
+
+/*
+**	Setando altura max para input
+**
+*/
+.io.form ::-webkit-datetime-edit,
+.io.formulario ::-webkit-datetime-edit,
+.io.form ::-webkit-inner-spin-button,
+.io.formulario ::-webkit-inner-spin-button {
+	height: 1.21428571em;
+}
+
+.io.form input:not([type]),
+.io.formulario input:not([type]),
+.io.form input[type="date"],
+.io.formulario input[type="date"],
+.io.form input[type="datetime-local"],
+.io.formulario input[type="datetime-local"],
+.io.form input[type="email"],
+.io.formulario input[type="email"],
+.io.form input[type="number"],
+.io.formulario input[type="number"],
+.io.form input[type="password"],
+.io.formulario input[type="password"],
+.io.form input[type="search"],
+.io.formulario input[type="search"],
+.io.form input[type="tel"],
+.io.formulario input[type="tel"],
+.io.form input[type="time"],
+.io.formulario input[type="time"],
+.io.form input[type="text"],
+.io.formulario input[type="text"],
+.io.form input[type="file"],
+.io.formulario input[type="file"],
+.io.form input[type="url"]
+.io.formulario input[type="url"] {
+	font-family: Roboto, sans-serif, 'Lato';
+	margin: 0em;
+	outline: none;
+	-webkit-appearance: none;
+	tap-highlight-color:  rgba(255, 255, 255, 0);
+	line-height: 1.21428571em;
+	padding: 0.67857143em 1em;
+	font-size: .83657143em;
+	background: #FFF;
+	border: 1px solid rgba(34, 36, 38, 0.15);
+	color: rgba(0, 0, 0, 0.89);
+	border-radius: 0.28571429rem;
+	box-shadow: 0em 0em 0em 0em transparent inset;
+	-webkit-transition: color 0.1s ease, border-color 0.1s ease;
+	transition: color 0.1s ease, border-color 0.1s ease;
+}
+
+.io.form textarea,
+.io.formulario textarea {
+	margin: 0em;
+	-webkit-appearance: none;
+	tap-highlight-color:  rgba(255, 255, 255, 0);
+	padding: 0.78571429em 1em;
+	background: #fff;
+	border: 1px solid rgba(34, 36, 38, 0.15);
+	outline: none;
+	border-radius: 0.25rem;
+	box-shadow: 0em 0em 0em 0em transparent inset;
+	-webkit-transition: color 0.1s ease, border-color 0.1s ease;
+	transition: color 0.1s ease, border-color 0.1s ease;
+	font-size: .83657143em;
+	line-height: 1.2857;
+	resize: vertical;
+}
+
+.io.form textarea:not([rows]),
+.io.formulario textarea:not([rows]) {
+	height: 12em;
+	max-height: 14em;
+	min-height: 8em;
+}
+
+.io.form textarea,
+.io.formulario textarea,
+.io.form input[type="checkbox"],
+.io.formulario input[type="checkbox"] {
+	vertical-align: top;
+}
+
+
+.io.form select,
+.io.formulario select {
+	display: block;
+	height: auto;
+	width: 100%;
+	background: #fff;
+	border: 1px solid rgba(34, 36, 38, 0.15);
+	border-radius: 0.28571429rem;
+	box-shadow: 0em 0em 0em 0em transparent inset;
+	padding: 0.62em 1em;
+	-webkit-transition: color 0.1s ease, border-color 0.1s ease;
+	transition: color 0.1s ease, border-color 0.1s ease;
+}
+
+.io.form .field > .dropdown,
+.io.formulario .campo > .dropdown {
+	width: 100%;
+}
+
+.io.form .field > .dropdown > .dropdown.icon,
+.i.formulario .campo > .dropwdown > .dropdown.icone {
+	float: right;
+}
+
+.io.form .field > .io.input,
+.io.formulario .campo > .io.input,
+.io.form .fields .field .io.input,
+.io.formulario .campos .campo .io.input,
+.io.form .wide.field .io.input,
+.io.formulario .wide.campo .io.input {
+	width: 100%;
+}
+
+.io.form .inline.fields > .field:not(.wide) .io.input,
+.io.formulario .inline.campos > .campo:not(.wide) .io.input,
+.io.form .inline.field:not(.wide) .io.input,
+.io.formulario .inline.campo:not(.wide) .io.input {
+	width: auto;
+	vertical-align: middle;
+}
+
+.io.form .fields .field .io.input input,
+.io.formulario .campos .campo .io.input input,
+.io.form .field .io.input input,
+.io.formulario .campo .io.input input {
+	width: auto;
+}
+
+
+/*
+**	Focus 
+**
+*/
+.io.form input:not([type]):focus,
+.io.formulario input:not([type]):focus,
+.io.form input[type="date"]:focus,
+.io.formulario input[type="date"]:focus,
+.io.form input[type="datetime-local"]:focus,
+.io.formulario input[type="email"]:focus,
+.io.formulario input[type="email"]:focus,
+.io.form input[type="number"]:focus,
+.io.formulario input[type="number"]:focus,
+.io.form input[type="password"]:focus,
+.io.formulario input[type="password"]:focus,
+.io.form input[type="search"]:focus,
+.io.formulario input[type="search"]:focus,
+.io.form input[type="tel"]:focus,
+.io.formulario input[type="tel"]:focus,
+.io.form input[type="time"]:focus,
+.io.formulario input[type="time"]:focus,
+.io.form input[type="text"]:focus,
+.io.formulario input[type="text"]:focus,
+.io.form input[type="file"]:focus,
+.io.formulario input[type="file"]:focus,
+.io.form input[type="url"]:focus,
+.io.formulario input[type="url"]:focus{
+	color: rgba(0, 0, 0, 0.95);
+	border-color: #ADD6F8;
+	border-radius: 0.28571429rem;
+	background: #fff;
+	box-shadow: 0px 0em 0em 0em rgba(34, 36, 38, 0.35) inset;
+}
+
+.io.form textarea:focus,
+.io.formulario textarea:focus {
+	color: rgba(0, 0, 0, 0.95);
+	border-color: #ADD6F8;
+	border-radius: 0.25rem;
+	background: #fff;
+	box-shadow: 0px 0em 0em 0em rgba(34, 36, 38, 0.35) inset;
+	-webkit-appearance: none;
+}
+
+
+/*
+**	Desabilitado
+**
+*/
+.io.form .fields.disabled .field,
+.io.formulario .campos.desabilitado .campo,
+.io.form .field.disabled,
+.io.formulario .campo.desabilitado,
+.io.form .field :disabled,
+.io.formulario .campo :disabled {
+	pointer-events: none;
+	opacity: 0.45;
+}
+
+.io.form .disabled.field > label,
+.io.formulario .desabilitado.campo > label,
+.io.form .disabled.fields > label,
+.io.formulario .desabilitado.campos > label {
+	opacity: 0.45;
+}
+
+.io.form .disabled.field :disabled,
+.io.formulario .desabilitado.campo :disabled {
+	opacity: 1;
+}
+
+
+
+/*
+**	Carregando
+**
+*/
+.io.form.loading,
+.io.formulario.carregando {
+	position: relative;
+	cursor: default;
+	pointer-events: none;
+}
+
+.io.form.loading:before,
+.io.formulario.carregando:before {
+		position: absolute;
+		content: '';
+		top: 0%;
+		left: 0%;
+		background: rgba(255, 255, 255, 0.8);
+		width: 100%;
+		height: 100%;
+		z-index: 100;
+	}
+
+.io.form.loading:after,
+.io.formulario.carregando:after {
+		content: '';
+		box-sizing: border-box;
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		border-top: 2px solid #757575;
+		border-right: 2px solid transparent;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-ms-border-radius: 50%;
+		-o-border-radius: 50%;
+		border-radius: 50%;
+		-webkit-animation: m-loader-rotate 0.6s linear infinite;
+	    -moz-animation: m-loader-rotate 0.6s linear infinite;
+	    -ms-animation: m-loader-rotate 0.6s linear infinite;
+	    -o-animation: m-loader-rotate 0.6s linear infinite;
+	    animation: m-loader-rotate 0.6s linear infinite;
+	}
+	.io.form.loading:after,
+	.io.formulario.carregando:after {
+		width: 1.9rem;
+		height: 1.9rem;
+		margin-top: -0.7rem;
+		margin-left: -0.7rem;
+		border-top-width: 2px;
+		border-right-width: 2px;
+		z-index: 1001;
+	}
+
+@-webkit-keyframes m-loader-rotate {
+  to {
+    transform: rotate(360deg); } }
+
+@-moz-keyframes m-loader-rotate {
+  to {
+    transform: rotate(360deg); } }
+
+@-o-keyframes m-loader-rotate {
+  to {
+    transform: rotate(360deg); } }
+
+@keyframes m-loader-rotate {
+  to {
+    transform: rotate(360deg); } 
+}
+
+
+/*
+**	Campos Obrigatorios
+**
+*/
+.io.form .fields.required:not(.grouped) > .field > label:after,
+.io.formulario .campos.requerido:not(.grouped) > .campo > label:after,
+.io.form .fields.required.grouped > label:after,
+.io.formulario .campos.requerido.agrupado > label:after,
+.io.form .field.required > label:after,
+.io.formulario .campo.requerido > label:after,
+.io.form .fields.required:not(.grouped) > .field > .checkbox:after,
+.io.formulario .campos.requerido:not(.agrupado) > .campo > .checkboox:after,
+.io.form .field.required > .checkbox:after,
+.io.formulario .campo.requerido > .checkbox:after {
+	margin: -0.2em 0em 0em 0.2em;
+	content: '*';
+	color: #F4511E;
+}
+
+.io.form .fields.required:not(.grouped) > .field > label:after,
+.io.formulario .campos.requerido:not(.agrupado) > .campo > label:after,
+.io.form .fields.required.grouped > label:after,
+.io.formulario .campos.requerido.agrupado > label:after,
+.io.form .field.required > label:after,
+.io.formulario .campo.requerido > label:after {
+	display: inline-block;;
+	vertical-align: top;
+}
+
+.io.form .fields.required:not(.grouped) > .field > .checkbox:after,
+.io.formulario .campos.required:not(.agrupado) > .campo > .checkbox:after,
+.io.form .field.required > .checkbox:after,
+.io.formulario .campo.required > .checkbox:after {
+	position: absolute;
+	top: 0%;
+	left: 100%;
+}
+
+
+/*
+**	Placeholder 
+**
+*/
+.io.form ::-webkit-input-placeholder,
+.io.formulario ::-webkit-input-placeholder {
+	color: rgba(191, 191, 191, 0.89);
+} 
+.io.form ::-ms-input-placeholder,
+.io.formulario ::-ms-input-placeholder {
+	color: rgba(191, 191, 191, 0.89);
+}
+.io.form ::-moz-input-placeholder,
+.io.formulario ::-moz-input-placeholder {
+	color: rgba(191, 191, 191, 0.89);
+}
+.io.form :focus::-webkit-input-placeholder,
+.io.formulario :focus::-webkit-input-placeholder {
+	color: rgba(191, 191, 191, 0.89);
+}
+.io.form :focus::-ms-input-placeholder,
+.io.formulario :focus::-ms-input-placeholder {
+	color: rgba(191, 191, 191, 0.89);
+}
+.io.form :focus::-moz-input-placeholder,
+.io.formulario :focus::-moz-input-placeholder {
+	color: rgba(191, 191, 191, 0.89);
+}
+
+
+/*
+**	Campos
+**
+*/
+.io.form .fields,
+.io.formulario .campos {
+	display: -webit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	flex-direction: row;
+	margin: 0em -0.5em 1em;
+}
+
+.io.form .fields > .field,
+.io.formulario .campos > .campo {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+.io.form .fields > .field:first-child,
+.io.formulario .campos > .campos:first-child {
+	border-left: none;
+	box-shadow: none;
+}
+
+
+/*
+**	Combinações de Tamanhos
+**
+*/
+.io.form .two.fields > .fields,
+.io.formulario .dois.campos > .campos,
+.io.form .two.fields > .field,
+.io.formulario .dois.campos > .campo {
+	width: 50%;
+}
+.io.form .three.fields > .fields,
+.io.formulario .tres.campos > .campos,
+.io.form .three.fields > .field,
+.io.formulario .tres.campos > .campo {
+	width: 33.33333333%;
+}
+.io.form .four.fields > .fields,
+.io.formulario .quatro.campos > .campos,
+.io.form .four.fields > .field,
+.io.formulario .quatro.campos > .campo {
+	width: 25%;
+}
+.io.form .five.fields > .fields,
+.io.formulario .cinco.campos > .campos,
+.io.form .five.fields > .field,
+.io.formulario .cinco.campos > .campo {
+	width: 20%;
+}
+.io.form .six.fields > .fields,
+.io.formulario .seis.campos > .campos,
+.io.form .six.fields > .field,
+.io.formulario .seis.campos > .campo {
+	width: 16.66666667%;
+}
+.io.form .seven.fields > .fields,
+.io.formulario .sete.campos > .campos,
+.io.form .seven.fields > .field,
+.io.formulario .sete.campos > .campo {
+	width: 14.28571429%;
+}
+.io.form .eight.fields > .fields,
+.io.formulario .oito.campos > .campos,
+.io.form .eigth.fields > .field,
+.io.formulario .oito.campos > .campo {
+	width: 12.5%;
+}
+.io.form .nine.fields > .fields,
+.io.formulario .nove.campos > .campos,
+.io.form .nine.fields > .field,
+.io.formulario .nove.campos > .campo {
+	width: 11.11111111%;
+}
+.io.form .ten.fields > .fields,
+.io.formulario .dez.campos > .campos,
+.io.form .ten.fields > .field,
+.io.formulario .dez.campos > .campo {
+	width: 10%;
+}
+
+
+/*
+**	Combinações de Dimensionamento
+**
+*/
+.io.form .fields .wide.field,
+.io.formulario .campos .wide.campo {
+	width: 6.25%;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+.io.form .one.wide.field,
+.io.formulario .um.wide.campo {
+	width: 6.25% !important;
+}
+.io.form .two.wide.field,
+.io.formulario .dois.wide.campo {
+	width: 12.5% !important;
+}
+.io.form .three.wide.field,
+.io.formulario .tres.wide.campo {
+	width: 18.75% !important;
+}
+.io.form .four.wide.field,
+.io.formulario .quatro.wide.campo {
+	width: 25% !important;
+}
+.io.form .five.wide.field,
+.io.formulario .cinco.wide.campo {
+	width: 31.25% !important;
+}
+.io.form .six.wide.field,
+.io.formulario .seis.wide.campo {
+	width: 37.5% !important;
+}
+.io.form .seven.wide.field,
+.io.formulario .sete.wide.campo {
+	width: 43.75% !important;
+}
+.io.form .eight.wide.field,
+.io.formulario .oito.wide.campo {
+	width: 50% !important;
+}
+.io.form .nine.wide.field,
+.io.formulario .nove.wide.campo {
+	width: 56.25% !important;
+}
+.io.form .ten.wide.field,
+.io.formulario .dez.wide.campo {
+	width: 62.5% !important;
+}
+.io.form .eleven.wide.field,
+.io.formulario .onze.wide.campo {
+	width: 68.75% !important;
+}
+.io.form .twelve.wide.field,
+.io.formulario .doze.wide.campo {
+	width: 75% !important;
+}
+.io.form .thirteen.wide.field,
+.io.formulario .treze.wide.campo {
+	width: 81.25% !important;
+}
+.io.form .fourteen.wide.field,
+.io.formulario .quatorze.wide.campo {
+	width: 87.5% !important;
+}
+.io.form .fifteen.wide.field,
+.io.formulario .quinze.wide.campo {
+	width: 93.75% !important;
+}
+.io.form .sixteen.wide.field,
+.io.formulario .dezesseis.wide.campo {
+	width: 100% !important;
+}
+
+
+/*
+**	Campos em linha
+**
+*/
+.io.form .fields.inline,
+.io.formulario .campos.inline {
+	margin: 0em 0em 1em;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.io.form .fields.inline .field,
+.io.formulario .campos.inline .campo {
+	margin: 0em;
+	padding: 0em 1em 0em 0em;
+}
+
+.io.form .fields.inline > label,
+.io.formulario .campos.inline > label,
+.io.form .fields.inline .field > label,
+.io.formulario .campos.inline .campo > label,
+.io.form .fields.inline .field > p,
+.io.formulario .campos.inline .campo > p,
+.io.form .field.inline > label,
+.io.formulario .campo.inline > label,
+.io.form .field.inline > p,
+.io.formulario .campo.inline > p {
+	display: inline-block;
+	width: auto;
+	margin-top: 0em;
+	margin-bottom: 0em;
+	vertical-align: baseline; 
+	font-family: Roboto, sans-serif, 'Lato';  
+	font-size: .83657143em;    
+	font-weight: 500;
+	color: rgba(0, 0,0 , 0.90);
+	text-transform: none;
+}
+
+.io.form .fields.inline > label,
+.io.formulario .campos.inline > label {
+	margin: 0.035714em 1em 0em 0em;
+}
+
+
+/*
+**	Inputs em linha
+**
+*/
+.io.form .fields.inline .field > input,
+.io.formulario .campos.inline .campo > input,
+.io.form .fields.inline .field > select,
+.io.formulario .campos.inline .campo > select,
+.io.form .field.inline > input,
+.io.formulario .campo.inline > input,
+.io.form .field.inline > select,
+.io.formulario .campo.inline > select {
+	display: inline-block;
+	width: auto;
+	margin-top: 0em;
+	margin-bottom: 0em;
+	vertical-align: middle;
+	font-size: .83657143em;
+}
+
+.io.form .fields.inline .field > :first-child,
+.io.formulario .campos.inline .campo > :first-child,
+.io.form .field.inline > :first-child,
+.io.formualrio .campo.inline > :first-child {
+	margin: 0em 0.85714286em 0em 0em;
+}
+
+.io.form .fields.inline .wide.field,
+.io.formualrio .campos.inline .wide.campo {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.io.form .fields.inline .wide.field > input,
+.io.formulario .campos.inline .wide.campo > input,
+.io.form .fields.inline .wide.field > select,
+.io.formulario .campos.inline .wide.campo > select {
+	width: 100%;
+}
+
+
+/*
+**	Tamanhos
+**
+*/
+.io.form.tiny,
+.io.formulario.minusculo {
+	font-size: 0.78571429rem;
+}
+.io.form.mini,
+.io.formulario.mini {
+	font-size: 0.85714286rem;
+}
+.io.form.mini,
+.io.formulario.mini {
+	font-size: 0.85714286rem;
+}
+.io.form,
+.io.formulario {
+	font-size: 0.97941289rem;
+}
+.io.form.large,
+.io.formulario.largo {
+	font-size: 1.14285714rem;
+}
+
+
+/*
+**
+**	Experience UI - 1
+**	Input	
+**
+**
+*/
+.io.input,
+.io.entrada {
+	position: relative;
+	font-weight: normal;
+	font-style: normal;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	color: rgba(0, 0, 0, 0.97);
+}
+
+.io.input input,
+.io.entrada input {
+	margin: 0em;
+	max-width: 100%;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	text-align: left;
+	line-height: 1.21428571em;
+	font-family: Roboto, sans-serif, 'Lato'; 
+	padding: 0.67857143em 1em;
+	background: #FFF;
+	border: 1px solid rgba(34, 36, 38, 0.15);
+	color: rgba(0, 0, 0, 0.89);
+	border-radius: 0.22571429rem;
+	-webkit-transition: box-shadow 0.1s ease, border-color 0.1s ease;
+  	transition: box-shadow 0.1s ease, border-color 0.1s ease;
+  	box-shadow: none;	
+}
+
+
+/*
+**	Placeholder
+**
+*/
+.io.input input::-webkit-input-placeholder,
+.io.entrada input::-webkit-input-placeholder {
+	color: rgba(191, 191, 191, 0.97);
+}
+.io.input input::-moz-placeholder,
+.io.entrada input::-moz-placeholder {
+	color: rgba(191, 191, 191, 0.97);
+}
+.io.input input::-ms-input-placeholder,
+.io.entrada input::-ms-input-placeholder {
+	color: rgba(191, 191, 191, 0.97);
+}
+
+
+/*
+**	Desabilitado
+**
+*/
+.io.input.disabled,
+.io.entrada.desabilitado,
+.io.input:not(.disabled) input[disabled],
+.io.entrada:not(.desabilitado) input[disabled] {
+	opacity: 0.45;
+}
+.io.input.disabled input,
+.io.entrada.desabilitado input,
+.io.input:not(.disabled) input[disabled],
+.io.entrada:not(.desabilitado) input[disabled] {
+	pointer-events: none;
+}
+
+
+/*
+**	Active
+**
+*/
+.io.input input:active,
+.io.entrada input:active {
+	border-color: rgba(0, 0, 0, 0.3);
+	background: #FAFAFA;
+	color: rgba(0, 0, 0, 0.97);
+	box-shadow: none;
+}
+
+
+/*
+**	Focus
+**
+*/
+.io.input.focus input,
+.io.entrada.foco input,
+.io.input input:focus,
+.io.entrada input:focus {
+	border-color: #81D4FA;
+	background: #FFF;
+	color: rgba(0, 0, 0, 0.9);
+	box-shadow: none
+}
+
+.io.input.focus input::-webkit-input-placeholder,
+.io.entrada.foco input::-webkit-input-placeholder,
+.io.input input:focus::-webkit-input-placeholder,
+.io.entrada input:focus::-webkit-input-placeholder {
+	color: rgba(115, 115, 115, 0.97);
+}
+.io.input.focus input::-moz-placeholder,
+.io.entrada.foco input::-moz-placeholder,
+.io.input input:focus::-moz-placeholder,
+.io.entrada input:focus::-moz-placeholder {
+	color: rgba(115, 115, 115, 0.97);
+}
+.io.input.focus input:-ms-input-placeholder,
+.io.entrada.foco input:-ms-input-placeholder,
+.io.input input:focus:-ms-input-placeholder,
+.io.entrada input:focus:-ms-input-placeholder {
+	color: rgba(115, 115, 115, 0.97);
+}
+
+
+/*
+**	icone
+**
+*/
+.io.input.icon > i.icon,
+.io.entrada.icone > i.icone {
+	cursor: pointer;
+	position: absolute;
+	line-height: 1;
+	text-align: center;
+	top: 0px;
+	right: 0px;
+	margin: 0em;
+	height: 100%;
+	width: 2.67142857em;
+	opacity: 0.5;
+	border-radius: 0em 0.28571429rem 0.28571429rem 0em;
+	-webkit-transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease;
+}
+
+.io.input.icon > i.icon:not(.link),
+.io.entrada.icone > i.icone:not(.link) {
+	pointer-events: none;
+}
+
+.io.input.icon input,
+.io.entrada.icone input {
+	padding-right: 2.67142857em !important;
+}
+
+.io.input.icon > i.icon:before,
+.io.entrada.icone > i.icone:before,
+.io.input.icon > i.icon:after,
+.io.entrada.icone > i.icone:after {
+	left: 0;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	width: 100%;
+	margin-top: -0.5em;
+}
+
+.io.input.icon > i.link.icon,
+.io.entrada.icone > i.link.icone {
+	cursor: pointer;
+}
+
+.io.input.icon > i.icon.circular,
+.io.entrada.icone > i.icone.circular {
+	top: 0.35em;
+	right: 0.5em;
+}
+
+
+/*
+**	Icone a esquerda
+**
+*/
+.io[class*="icon left"].input > i.icon,
+.io[class*="icone esquerda"].entrada > i.icone {
+	right: auto;
+	left: 1px;
+	border-radius: 0.28571429rem 0em 0em 0.28571429rem;
+}
+.io[class*="icon left"].input > i.icon.circular,
+.io[class*="icone esquerda"].entrada > i.icone.circular {
+	right: auto;
+	left: 0.5em;
+}
+.io[class*="icon left"].input > input,
+.io[class*="icone esquerda"].entrada > input {
+	padding-left: 2.67142857em !important;
+	padding-right: 1em !important;
+}
+
+
+.io.input.icon > input:focus ~ i.icon,
+.io.entrada.icone > input:focus ~ i.icone {
+	opacity: 1;
+}
+
+
+/*
+**	Input + Botão
+**
+*/
+.io.input.action > .button,
+.io.entrada.acao > .botao,
+.io.input.action > .buttons,
+.io.entrada.acao > .botoes {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+}
+
+.io.input.action > .button,
+.io.entrada.acao > .botao,
+.io.input.action > .buttons > .button,
+.io.entrada.acao > .botoes > .botao {
+	padding-top: 0.78571429em;
+	padding-bottom: .78571429em;
+	margin: 0;
+}
+
+.io.input.action:not([class*="action left"]) > input,
+.io.entrada.acao:not([class*="acao esquerda"]) > input {
+	border-top-right-radius:  0px !important;
+	border-bottom-right-radius: 0px !important;
+	border-right-color: transparent !important;
+}
+
+.io.input.action:not([clas*="action left"]) > .dropdown:not(:first-child),
+.io.entrada.acao:not([class*="acao esquerda"]) > .dropdown:not(:first-child),
+.io.input.acion:not([class*="action left"]) > .button:not(:first-child),
+.io.entrada.acao:not([class*="acao esquerda"]) > .botao:not(:first-child),
+.io.input.action:not([class*="action left"]) > .buttons:not(:first-child),
+.io.entrada.acao:not([class*="acao esquerda"]) > .botoes:not(:first-child) {
+	border-radius: 0px;
+}
+
+.io.input.action:not([clas*="action left"]) > .dropdown:last-child,
+.io.entrada.acao:not([class*="acao esquerda"]) > .dropdown:last-child,
+.io.input.acion:not([class*="action left"]) > .button:last-child,
+.io.entrada.acao:not([class*="acao esquerda"]) > .botao:last-child,
+.io.input.action:not([class*="action left"]) > .buttons:last-child > .button,
+.io.entrada.acao:not([class*="acao esquerda"]) > .botoes:last-child > .botoes {
+	border-radius: 0px 0.28571429rem 0.28571429rem 0px;
+}
+
+.io.input.action:not([class*="action left"]) input:focus,
+.io.entrada.acao:not([class*="acao esquerda"]) input:focus {
+	/*border-right-color: #81D4FA !important;*/
+}
+
+
+/*
+**	Input + Botão esquerda
+**
+*/
+.io[class*="action left"].input > input,
+.io[class*="acao esquerda"].entrada > input {
+	border-top-left-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+	border-left-color: transparent !important;
+}
+
+.io[class*="action left"].input > .dropdown,
+.io[class*="acao esquerda"].entrada > .dropdown,
+.io[class*="action left"].input > .button,
+.io[class*="acao esquerda"].entrada > .botao,
+.io[class*="action left"].input > .buttons > .button,
+.io[class*="acao esquerda"].entrada > .botoes > .botao {
+	border-radius: 0px;
+}
+
+.io[class*="action left"].input > .dropdown:first-child,
+.io[class*="acao esquerda"].entrada > .dropdown:first-child,
+.io[class*="action left"].input > .button:first-child,
+.io[class*="acao esquerda"].entrada > .botao:first-child,
+.io[class*="action left"].input > .buttons:first-child > .button,
+.io[class*="acao esquerda"].entrada > .botoes:first-child > .botao {
+	border-radius: 0.28571429rem 0px 0px 0.28571429rem;
+}
+
+
+/*
+**	Input Fluido
+**
+*/
+.io.input.fluid,
+.io.entrada.fluido {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.io.input.fluid > input,
+.io.entrada.fluido > input {
+	width: 0px !important;
+}
+
+
+/*
+**	Tamanhos
+**
+*/
+.io.input.mini,
+.io.entrada.mini {
+	font-size: 0.78571429em;
+}
+.io.input.small,
+.io.entrada.pequeno {
+	font-size:  0.92857143em;
+}
+.io.input,
+.io.entrada {
+	font-size: 1em;
+}
+.io.input.large,
+.io.entrada.largo {
+	font-size:  1.14285714em;
+}
+
+
+/*
+**
+**	Experience UI - 1
+**	Pesquisa	
+**
+**
+*/
+.io.search,
+.io.pesquisa {
+	position: relative;
+}
+.io.search > .prompt,
+.io.pesquisa > .prompt {
+	margin: 0em;
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	text-shadow: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1.21428571em;
+	padding: 0.67857143em 1em;
+	font-size: 1em;
+	border: 1px solid rgba(34, 36, 38, 0.15);
+	background: #FFF;
+	color: rgba(0, 0, 0, 0.97);
+	box-shadow: 0em 0em 0em 0em transparent inset;
+  	-webkit-transition: background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, border-color 0.1s ease;
+  	transition: background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, border-color 0.1s ease; 
+}
+
+.io.search .prompt,
+.io.pesquisa .prompt {
+	border-radius: 500rem;
+}
+
+
+/*
+**	icone
+**
+*/
+.io.search .prompt ~ .search.icon,
+.io.pesquisa .prompt ~ .pesquisa.icone {
+	cursor: pointer;
+}
+
+
+/*
+**	Box Resultado
+**
+*/
+.io.search > .results,
+.io.pesquisa > .resultados {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0%;
+	-webkit-transform-origin: center top;
+	transform-origin: center top;
+	white-space: normal;
+	background: #FFF;
+	margin-top: 0.5em;
+	width: 18em;
+	border-radius: 0.28571429rem;
+	box-shadow: px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.15);
+	border: 1px solid #D4D4D5;
+	z-index: 998;
+}
+.io.search > .results > :first-child,
+.io.pesquisa > .resultados > :first-child {
+	border-radius: 0.28571429rem 0.28571429rem 0em 0em;
+}
+.io.search > .results > :last-child,
+.io.pesquisa > .resultados > :last-child {
+	border-radius: 0em 0em 0.28571429rem 0.28571429rem;
+}
+
+
+/*
+**	Focus
+**
+*/
+.io.search > .prompt:focus,
+.io.pesquisa > .prompt:focus {
+	border-color:  rgba(34, 36, 38, 0.35);
+	background: #fff;
+	color: rgba(0, 0, 0, 0.95);
+}
+
+
+/*
+**	Carregando
+**
+*/
+.io.search.loading .input > i.icon:before,
+.io.pesquisa.carregando .entrada > i.icone:before {
+	content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-top: 2px solid #5d7081;
+    border-right: 2px solid transparent;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-animation: m-loader-rotate 0.6s linear infinite;
+    -moz-animation: m-loader-rotate 0.6s linear infinite;
+    -ms-animation: m-loader-rotate 0.6s linear infinite;
+    -o-animation: m-loader-rotate 0.6s linear infinite;
+    animation: m-loader-rotate 0.6s linear infinite;
+}
+.io.search.loading .input > i.icon:before,
+.io.pesquisa.carregando .entrada > i.icone:before {
+	width: 1.4rem;
+    height: 1.4rem;
+    margin-top: -0.7rem;
+    margin-left: -0.7rem;
+    border-top-width: 2px;
+    border-right-width: 2px;
+}
+.io.search.loading .input > i.icon:before,
+.io.pesquisa.carregando .entrada > i.icone:before {
+	left: auto;
+    right: 0.6rem;
+}
+
+
+/*
+**	Hover
+**
+*/
+.io.search > .results .result:hover,
+.io.pesquisa > .resultados > .resultado:hover {
+	background: #F9FAFB;
+}
+.io.search .action:hover,
+.io.pesquisa .acao:hover {
+	background: #E0E0E0;
+}
+
+
+/*
+**	Fluido
+**
+*/
+.io.search.fluid .results,
+.io.pesquisa.fluido .resultados {
+	width: 100%;
+}
+
+
+/*
+**	Tamanhos
+**
+*/
+.io.search.mini,
+.io.pesquisa.mini {
+	font-size: 0.78571429em;
+}
+.io.search.small,
+.io.pesquisa.pequeno {
+	font-size: 0.92857143em;
+}
+.io.search,
+.io.pesquisa {
+	font-size: 1em;
+}
+.io.search.large,
+.io.pesquisa.largo {
+	font-size: 1.14285714em;
+}
+
+
+
