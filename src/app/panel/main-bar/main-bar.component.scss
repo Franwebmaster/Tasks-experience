@@ -17,4 +17,11 @@
 		margin: 13px 0;
 		font-size: 15px;
     }
+
+    .botao-sair {
+        position: fixed;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '../../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-main-bar',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  rotaParaWelcome() {
+  	this.router.navigate(['welcome'])
+  }
 
   ngOnInit() {
   }
