@@ -13,9 +13,28 @@
         margin: calc(6% - 0%) 0 0;
         padding: 0;
 
+        .pontos {
+            position: absolute;
+            top: 6%;
+            width: 6%;
+            will-change: transform;
+            z-index: 2;
+            right: 23%;
+        }
+
+        .triangulo {
+            position: absolute;
+            top: 1%;
+            width: 6%;
+            will-change: transform;
+            z-index: 2;
+            left: 26%;
+            transform: rotateY(10deg);
+        }
+
         .destaque {
             position: absolute;
-            top: 11%;
+            top: 12%;
             width: 10%;
             -webkit-animation: destaque 15s ease-in infinite both alternate;
             animation: destaque 5s cubic-bezier(.55,.09,.68,.53) infinite both alternate;
@@ -34,7 +53,7 @@
             position: absolute;
             top: 3%;
             width: 6%;
-            animation: circulo 15s ease-in infinite both alternate;
+            // animation: circulo 25s linear infinite;
             will-change: transform;
             right: 30%;
             z-index: 2;
@@ -235,14 +254,26 @@
  }
 
 //====================== Animações
-@keyframes circulo {
+@keyframes triangulo {
     0% {
-    transform: rotate(0) translate3d(0,20px,0) rotate(0);
+    transform: rotate(0) translate3d(0,10px,0) rotate(0);
     }
     100% {
-        transform: rotate(360deg) translate3d(0,40px,0) rotate(-360deg);
+        transform: rotate(360deg) translate3d(0,20px,0) rotate(-360deg);
     }
 }
+
+
+@keyframes  circulo {
+    0% {
+    transform: rotate(0) translate3d(0,10px,0) rotate(0);
+    }
+    100% {
+        transform: rotate(-360deg) translate3d(0,20px,0) rotate(360deg);
+    }
+}
+
+
 
 @keyframes destaque {
     0% {
